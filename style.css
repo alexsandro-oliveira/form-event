@@ -237,8 +237,15 @@ fieldset legend {
   background: #181f8b;
  }
 
- input:invalid {
-  border: 1px solid #FF1010;
- }
+  /*input:invalid {
+  border: 1px solid #FF1010; 
+ } */
 
+input:required:not(:placeholder-shown):invalid {
+  border: 1px solid #FF1010;  
+}
 
+input::placeholder{
+  color: #aaa6b4;
+  opacity: 0;
+} 
